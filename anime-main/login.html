@@ -133,10 +133,11 @@
                 type="button"
                 class="site-btn"
                 onclick="function hi(){                  
-                 const account = document.getElementById('username').getAttribute('value');
-                const password = document.getElementById('password').getAttribute('value');
-                console.log(account,password);
+                 const account = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
                 if (account === 'duongpham' && password === '123456789') {
+                    localStorage.setItem('account_login', account);
+                    localStorage.setItem('password_login', password);
                     window.location.pathname = '/anime-main/index.html';
                     }
                 };hi()"
